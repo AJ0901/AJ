@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>喜歡的歌手</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffd0d7 0%, #ffffff 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      cursor: none;
+    }
+    .navbar { background-color: #ff7d9a !important; }
+    .navbar .nav-link, .navbar-brand { color: white !important; }
+    footer { background-color: #ff7d9a; }
+
+    .card {
+      transition: transform 0.5s, box-shadow 0.5s;
+      animation: fadeSlideIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .row .col:nth-child(odd) .card { animation-name: slideInLeft; }
+    .row .col:nth-child(even) .card { animation-name: slideInRight; }
+
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-100px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(100px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .card-img-top {
+      animation: floatImg 3s ease-in-out infinite;
+    }
+
+    @keyframes floatImg {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* 音符特效 */
+    .note {
+      position: fixed;
+      font-size: 20px;
+      color: #ff7d9a;
+      animation: floatUp 2s ease-out forwards;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">阿捷想聽音樂了</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+        <li class="nav-item"><a class="nav-link active" href="singers.html">喜歡的歌手</a></li>
+        <li class="nav-item"><a class="nav-link" href="songs.html">喜歡的歌曲</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">我喜歡的歌手</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <!-- 每位歌手卡片 -->
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="imange/Charlie Puth.jpg" class="card-img-top" alt="Charlie Puth">
+        <div class="card-body">
+          <h5 class="card-title">Charlie Puth</h5>
+          <p class="card-text">代表作《See You Again》、《Attention》。</p>
+          <p><strong>YouTube連結：</strong><a href="https://www.youtube.com/@CharliePuth" target="_blank">點我前往</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="imange/Bruno Mars.jpg" class="card-img-top" alt="Bruno Mars">
+        <div class="card-body">
+          <h5 class="card-title">Bruno Mars</h5>
+          <p class="card-text">代表作《Uptown Funk》、《Just the Way You Are》。</p>
+          <p><strong>YouTube連結：</strong><a href="https://www.youtube.com/@BrunoMars" target="_blank">點我前往</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="imange/5 Seconds of Summer.jpg" class="card-img-top" alt="5 Seconds of Summer">
+        <div class="card-body">
+          <h5 class="card-title">5 Seconds of Summer</h5>
+          <p class="card-text">代表作《Youngblood》。</p>
+          <p><strong>YouTube連結：</strong><a href="https://www.youtube.com/@5SOS" target="_blank">點我前往</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="imange/Ed Sheeran.jpg" class="card-img-top" alt="Ed Sheeran">
+        <div class="card-body">
+          <h5 class="card-title">Ed Sheeran</h5>
+          <p class="card-text">代表作《Shape of You》、《Perfect》。</p>
+          <p><strong>YouTube連結：</strong><a href="https://www.youtube.com/@EdSheeran" target="_blank">點我前往</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="imange/Justin Bieber.jpg" class="card-img-top" alt="Justin Bieber">
+        <div class="card-body">
+          <h5 class="card-title">Justin Bieber</h5>
+          <p class="card-text">代表作《Baby》、《Peaches》。</p>
+          <p><strong>YouTube連結：</strong><a href="https://www.youtube.com/@JustinBieberVEVO" target="_blank">點我前往</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="imange/Imagine Dragons.jpg" class="card-img-top" alt="Imagine Dragons">
+        <div class="card-body">
+          <h5 class="card-title">Imagine Dragons</h5>
+          <p class="card-text">代表作《Believer》、《Thunder》。</p>
+          <p><strong>YouTube連結：</strong><a href="https://www.youtube.com/@ImagineDragons" target="_blank">點我前往</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="text-white text-center p-3 mt-5">
+  製作人：蔡阿捷
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // 滑鼠音符動畫
+  document.addEventListener("mousemove", function(e) {
+    const note = document.createElement("div");
+    note.className = "note";
+    note.innerText = "🎵";
+    note.style.left = (e.clientX + Math.random() * 10) + "px";
+    note.style.top = (e.clientY + Math.random() * 10) + "px";
+    document.body.appendChild(note);
+    setTimeout(() => note.remove(), 2000);
+  });
+</script>
+
+</body>
+</html>

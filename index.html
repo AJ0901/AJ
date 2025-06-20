@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>首頁 - 阿捷想聽音樂了</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(to bottom, #ffd0d7 0%, #ffffff 100%);
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .navbar { background-color: #ff7d9a !important; }
+    .navbar .nav-link, .navbar-brand { color: white !important; }
+    footer { background-color: #ff7d9a; }
+
+    .fade-in { animation: fadeIn 1s ease forwards; opacity: 0; }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .typing-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff4d6d;
+      white-space: nowrap;
+      border-right: 3px solid #ff4d6d;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+      display: inline-block;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 粒子動畫背景 -->
+<div id="particles-js"></div>
+
+<!-- 導覽列 -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">阿捷想聽音樂了</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">首頁</a></li>
+        <li class="nav-item"><a class="nav-link" href="singers.html">喜歡的歌手</a></li>
+        <li class="nav-item"><a class="nav-link" href="songs.html">喜歡的歌曲</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 內容區塊 -->
+<div class="container text-center mt-5 fade-in">
+  <h1 class="typing-text">最近發現自己很喜歡聽歌於是就有了這個網站</h1>
+  <p class="lead mt-4">這裡分享我最近喜歡的歌手與歌曲！</p>
+  <img src="imange/Loppy.jpg" alt="音樂圖片" class="img-fluid rounded mt-4">
+</div>
+
+<!-- 頁尾 -->
+<footer class="text-white text-center p-3 mt-5">
+  製作人：蔡阿捷 
+</footer>
+
+<!-- JS: Bootstrap + 粒子特效 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 50 },
+      "color": { "value": "#ff99bb" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.4 },
+      "size": { "value": 4 },
+      "line_linked": {
+        "enable": true,
+        "distance": 120,
+        "color": "#ff99bb",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" }
+      },
+      "modes": {
+        "repulse": { "distance": 80 }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+</body>
+</html>
